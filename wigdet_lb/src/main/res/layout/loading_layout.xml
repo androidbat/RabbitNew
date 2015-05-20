@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/click_retry_layout1"
+    android:orientation="vertical" >
+    
+   <ProgressBar
+        android:id="@+id/progressbar"
+        style="@android:style/Widget.Holo.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone" />
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+        android:id="@+id/iv_show"
+        android:visibility="gone"
+        android:src="@drawable/no_data"
+        android:layout_marginBottom="13dp"
+        />
+    
+    <TextView 
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:gravity="center"
+        	android:textColor="#7d7d7b"
+            android:textSize="15sp"
+            android:lineSpacingExtra="9dp"
+            android:lineSpacingMultiplier="1"
+        android:visibility="gone"
+        	android:text="点击屏幕重新加载"
+            />
+
+</LinearLayout>
