@@ -28,6 +28,7 @@ public class CircleHoleView extends View {
     }
 
     public CircleHoleView(Context context, AttributeSet attrs, int defStyleAttr) {
+        //1
         super(context, attrs, defStyleAttr);
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CircleHoleView, defStyleAttr, 0);
