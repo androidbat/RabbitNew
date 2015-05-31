@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/guidance_img_1"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/log_iv"
+        android:visibility="invisible"
+        android:src="@drawable/float_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+</RelativeLayout>
