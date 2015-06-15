@@ -17,7 +17,6 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
 
         View log_iv = findViewById(R.id.log_iv);
         log_iv.setVisibility(View.VISIBLE);

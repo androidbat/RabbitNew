@@ -21,6 +21,9 @@
 
         <activity
             android:name=".MainActivity"/>
+
+        <receiver android:name=".receiver.AlarmReceiver">
+            </receiver>
     </application>
 
 </manifest>
