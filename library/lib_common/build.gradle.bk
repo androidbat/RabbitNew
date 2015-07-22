@@ -1,0 +1,237 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.0'
+    }
+}
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile project(':library:com.yitu.common')
+    compile project(':library:com.yitu.widget')
+    compile project(':library:pulltorefresh-2.1.2')
+    compile project(':library:alipay')
+    compile files('libs/butterknife-6.1.0.jar')
+}
+
+android {
+
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        instrumentTest.setRoot('tests')
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    defaultConfig {
+	//1
+        applicationId "com.yitu.youji"
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 190
+        versionName "1.9.0"
+        // dex突破65535的限制
+        /*multiDexEnabled true*/
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../yitu.key")
+            storePassword "yitu2015"
+            keyAlias "yitukey"
+            keyPassword "yitu2015"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "_101"]
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),'proguard-rules.pro'
+        }
+        deta {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),'proguard-rules.pro'
+        }
+    }
+
+       productFlavors {
+           _101 {}
+           _102 {}
+           _103 {}
+           _104 {}
+           _105 {}
+           _106 {}
+           _107 {}
+           _108 {}
+           _109 {}
+           _110 {}
+           _111 {}
+           _112 {}
+           _113 {}
+           _114 {}
+           _115 {}
+           _116 {}
+           _117 {}
+           _118 {}
+           _119 {}
+           _120 {}
+           _121 {}
+           _122 {}
+           _123 {}
+           _124 {}
+           _125 {}
+           _126 {}
+           _127 {}
+           _128 {}
+           _129 {}
+           _130 {}
+           _131 {}
+           _132 {}
+           _133 {}
+           _134 {}
+           _135 {}
+           _136 {}
+           _137 {}
+           _138 {}
+           _139 {}
+           _140 {}
+           _141 {}
+           _142 {}
+           _143 {}
+           _144 {}
+           _145 {}
+           _146 {}
+           _147 {}
+           _148 {}
+           _149 {}
+           _150 {}
+           _151 {}
+           _152 {}
+           _153 {}
+           _154 {}
+           _155 {}
+           _156 {}
+           _157 {}
+           _158 {}
+           _159 {}
+           _160 {}
+           _161 {}
+           _162 {}
+           _163 {}
+           _164 {}
+           _165 {}
+           _166 {}
+           _167 {}
+           _168 {}
+           _169 {}
+           _170 {}
+           _171 {}
+           _172 {}
+           _173 {}
+           _174 {}
+           _175 {}
+           _176 {}
+           _177 {}
+           _178 {}
+           _179 {}
+           _180 {}
+           _181 {}
+           _182 {}
+           _183 {}
+           _184 {}
+           _185 {}
+           _186 {}
+           _187 {}
+           _188 {}
+           _189 {}
+           _190 {}
+           _191 {}
+           _192 {}
+           _193 {}
+           _194 {}
+           _195 {}
+           _196 {}
+           _197 {}
+           _198 {}
+           _199 {}
+           _200 {}
+       }
+    //批量配置
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+
+    applicationVariants.all{ variant->
+        variant.outputs.each { output->
+            def oldFile = output.outputFile
+            if(variant.buildType.name.equals('release')){
+                def newName = "youji_v${defaultConfig.versionName}${variant.productFlavors[0].name}.apk"
+//                def newName = "com.yitu.youji_v${defaultConfig.versionName}_${getDate()}.apk"
+                output.outputFile = new File(oldFile.parent, newName)
+            }
+            if(variant.buildType.name.equals('beta')){
+//                def newName = oldFile.name.replace(".apk", "-v" + getVersionNameFromManifest() + "-build" + getDate() + ".apk")
+                def newName = "youji_v${defaultConfig.versionName}_${getDate()}.apk"
+                output.outputFile = new File(oldFile.parent, newName)
+            }
+            if(variant.buildType.name.equals('debug')){
+//                 def debugApkName = 'com.yitu.youji_' + getVersionNameFromManifest() + '_' + getDate() +'.apk'
+//                 output.outputFile = new File(oldFile.parent, debugApkName)
+            }
+        }
+    }
+
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('MMddHHmm')
+    return formattedDate
+}
+
+def getDate2() {
+    def date = new Date()
+    def formattedDate = date.format('yyyy.MM.dd')
+    return formattedDate
+}
+
+def getVersionNameFromManifest() {
+    def manifestParser = new com.android.builder.core.DefaultManifestParser()
+    return manifestParser.getVersionName(android.sourceSets.main.manifest.srcFile)
+}
+
