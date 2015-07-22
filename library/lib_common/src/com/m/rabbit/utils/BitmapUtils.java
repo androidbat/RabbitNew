@@ -2,18 +2,17 @@ package com.m.rabbit.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
-import android.graphics.PorterDuff.Mode;
-import android.graphics.Shader.TileMode;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PaintFlagsDrawFilter;
 import android.graphics.PorterDuff;
+import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.Shader.TileMode;
 
 public class BitmapUtils {
 
@@ -38,8 +37,7 @@ public class BitmapUtils {
         canvas.drawBitmap(bitmap, rect, rect, paint);
         
         bitmap.recycle();
-        bitmap = null;
-        
+
         return output;
     }
 	
