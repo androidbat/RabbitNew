@@ -1,24 +1,23 @@
 package com.m.rabbit.utils;
 
-import java.math.BigDecimal;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Build;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
-import android.text.TextUtils;
 import android.text.style.CharacterStyle;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.util.Linkify;
 import android.util.Patterns;
+
+import java.math.BigDecimal;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @SuppressLint("NewApi")
 public class StringUtils {
@@ -89,11 +88,11 @@ public class StringUtils {
     }
 
     public static boolean isNotEmpty(String str) {
-        return str != null && !"".equals(str.trim());
+        return str != null && !"".equals(str.trim()) && !"null".equals(str.trim());
     }
 
     public static boolean isEmpty(String str) {
-        return str == null || "".equals(str.trim());
+        return str == null || "".equals(str.trim()) || "null".equals(str.trim());
     }
 
     public static String converVideoSize(long videoSize) {
@@ -118,11 +117,10 @@ public class StringUtils {
         return videoSize + "byte";
     }
 
-    public static boolean checkPhone(String phone) {
-        if (isNumber(phone)) {
-            return true;
-        }
-        return false;
+    public static boolean checkPhone(String str) {
+        Pattern p = Pattern.compile("^((170)|([1][3,4,5,8][0-9]))\\d{8}$"); // 验证手机号
+        Matcher m = p.matcher(str);
+        return m.matches();
     }
 
     public static boolean isNumber(String num) {
