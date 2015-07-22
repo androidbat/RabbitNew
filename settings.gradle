@@ -1,1 +1,1 @@
-include ':app', ':library:rlib', ':wigdet_lb'
+include ':app', ':library:lib_common', ':library:lib_widget'

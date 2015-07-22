@@ -11,8 +11,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/library" />
-            <option value="$PROJECT_DIR$/library/rlib" />
-            <option value="$PROJECT_DIR$/wigdet_lb" />
+            <option value="$PROJECT_DIR$/library/lib_common" />
+            <option value="$PROJECT_DIR$/library/lib_widget" />
           </set>
         </option>
       </GradleProjectSettings>
