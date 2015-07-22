@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="contentDescription">com.yitu.widget</string>
+    
+    <!-- pull fresh -->
+    <string name="pull_to_refresh_pull">下拉可以刷新...</string>
+    <string name="pull_to_refresh_release">松开即可刷新...</string>
+    <string name="pull_to_refresh_refreshing">加载中...</string>
+    <string name="pull_to_refresh_at">最后更新:</string>
+
+    <string name="load_full">已加载全部</string>
+    <string name="load_failed">加载失败,点击重试</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more_loading">更多加载中...</string>
+    <string name="release_to_load">释放加载更多</string>
+</resources>
