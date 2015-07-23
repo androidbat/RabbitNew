@@ -12,8 +12,6 @@ import android.view.MenuItem;
 
 import com.m.rabbit.receiver.AlarmReceiver;
 
-import de.greenrobot.event.EventBus;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            EventBus.getDefault().post("1111111111");
             return true;
         }
 
