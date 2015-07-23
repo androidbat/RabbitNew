@@ -1,4 +1,4 @@
-package yitu.rabbit;
+package com.m.rabbit;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
+import android.widget.Toast;
+
+import de.greenrobot.event.EventBus;
+import de.greenrobot.event.Subscribe;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -29,10 +33,17 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                finish();
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
-        },2000);
+        }, 2000);
+        EventBus.getDefault().register(new Object(){
+            @Subscribe
+            public void onEvent(String aa){
+                Toast.makeText(getApplicationContext(),aa,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

@@ -1,4 +1,4 @@
-package yitu.rabbit;
+package com.m.rabbit;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -10,7 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import yitu.rabbit.receiver.AlarmReceiver;
+import com.m.rabbit.receiver.AlarmReceiver;
+
+import de.greenrobot.event.EventBus;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            EventBus.getDefault().post("1111111111");
             return true;
         }
 

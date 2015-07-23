@@ -1,4 +1,4 @@
-package yitu.rabbit.receiver;
+package com.m.rabbit.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
