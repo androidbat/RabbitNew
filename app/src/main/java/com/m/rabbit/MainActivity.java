@@ -1,16 +1,10 @@
 package com.m.rabbit;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.m.rabbit.receiver.AlarmReceiver;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,16 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("noob");
         setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.icon);
-
-        AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
-        am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 5*1000, getAlarmIntent(getApplicationContext(),"aa"));
-    }
-
-    private static PendingIntent getAlarmIntent(Context context,String action){
-        Intent intent = new Intent(context, AlarmReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
-        return pendingIntent;
+        toolbar.setNavigationIcon(R.drawable.abc_ic_menu_copy_mtrl_am_alpha);
     }
 
     @Override
