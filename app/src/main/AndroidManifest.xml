@@ -22,8 +22,6 @@
         <activity
             android:name="com.m.rabbit.MainActivity"/>
 
-        <receiver android:name="com.m.rabbit.receiver.AlarmReceiver">
-            </receiver>
     </application>
 
 </manifest>
