@@ -13,20 +13,20 @@ import com.m.rabbit.utils.BitmapDecodeUtils;
 import java.util.List;
 
 
-public abstract class MyBaseAdapter<T> extends BaseAdapter{
+public abstract class MBaseAdapter<T> extends BaseAdapter{
 	protected List<T> mList=null;
     protected LayoutInflater inflater;
     protected Context mContext;
     protected DataProvider mDataProvider;
     protected Bitmap mDefaultBitmap;
-    public MyBaseAdapter(List<T> list,Context context){
+    public MBaseAdapter(List<T> list, Context context){
         mList=list;
         mContext=context;
         mDataProvider = ((RootActivity)context).getDataProvider();
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    public MyBaseAdapter(List<T> list,Context context,int defalutResId){
+    public MBaseAdapter(List<T> list, Context context, int defalutResId){
         this(list,context);
         mDefaultBitmap = BitmapDecodeUtils.decodeResource(context,defalutResId);
     }
