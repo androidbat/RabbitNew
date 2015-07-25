@@ -20,7 +20,6 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter{
     protected DataProvider mDataProvider;
     protected Bitmap mDefaultBitmap;
     public MyBaseAdapter(List<T> list,Context context){
-//        this(list,context,0);
         mList=list;
         mContext=context;
         mDataProvider = ((RootActivity)context).getDataProvider();
