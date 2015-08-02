@@ -1,7 +1,6 @@
 package com.yitu.widget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -11,7 +10,6 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -38,7 +36,7 @@ public class CircleHoleView extends View {
             right = (int) a.getDimension(R.styleable.CircleHoleView_right, -1);
             mRadius = (int) a.getDimension(R.styleable.CircleHoleView_radio, 0);
             bottom = (int) a.getDimension(R.styleable.CircleHoleView_bottom, 0);
-            color = a.getColor(R.styleable.CircleHoleView_color,color);
+            color = a.getColor(R.styleable.CircleHoleView_bg_color,color);
             a.recycle();
         }
     }
