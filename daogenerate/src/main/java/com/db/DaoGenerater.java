@@ -8,7 +8,7 @@ public class DaoGenerater {
 
     public static void main(String[] args) throws Exception
     {
-        Schema schema = new Schema(4, "de.greenrobot.daoexample");
+        Schema schema = new Schema(3, "com.m.rabbit.bean");
 
         addNote(schema);
 
@@ -17,11 +17,13 @@ public class DaoGenerater {
 
     private static void addNote(Schema schema)
     {
-        Entity note = schema.addEntity("Note");
-        note.addIdProperty();
-        note.addStringProperty("text").notNull();
-        note.addStringProperty("comment");
-        note.addDateProperty("date");
-        note.addLongProperty("mAaa");
+        Entity note = schema.addEntity("User");
+        note.addIdProperty().autoincrement();
+        note.addStringProperty("name");
+        note.addStringProperty("nickName");
+        note.addStringProperty("phone");
+        note.addIntProperty("gender");
+        note.addIntProperty("age");
+        note.addIntProperty("type");
     }
 }

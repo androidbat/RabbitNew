@@ -3,7 +3,7 @@ package com.m.rabbit.constant;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
-import com.m.rabbit.bean.User;
+import com.m.rabbit.bean.MUser;
 import com.m.rabbit.utils.AppUtils;
 import com.m.rabbit.utils.MD5Utils;
 import com.m.rabbit.utils.PropertiesUtils;
@@ -175,7 +175,7 @@ public class ShopUrlFactory {
 		return String.format(createUrl("/addShareLog?","gid","shareType"),gid,shareType);
 	}
 	
-	public static String updateUser(User user){
+	public static String updateUser(MUser user){
 		if (user == null) {
 			return "updateUser null";
 		}
@@ -202,7 +202,7 @@ public class ShopUrlFactory {
 //		return String.format(createUrl("/updateMemberBaseInfo?","meId","meName","sex","age","img","address","phone"),user.meId,user.meName,user.sex,user.age,user.img,UrlEncoder.encode(user.address),user.phone);
 	}
 	
-	public static String updateUser(User user,String field,String value){
+	public static String updateUser(MUser user,String field,String value){
 		return String.format(createUrl("/updateMemberBaseInfo?","meId",field),user.meId,value)+getUserSign(user);
 	}
 	
@@ -315,7 +315,7 @@ public class ShopUrlFactory {
 		return sb.toString();
 	}
 	
-	public static String getUserSign(User user){
+	public static String getUserSign(MUser user){
 		try {
 			return "&kid="+user.kid+"&sign="+MD5Utils.getMD5Lower(user.meId+user.kid+user.key);
 		} catch (Exception e) {

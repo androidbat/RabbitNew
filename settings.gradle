@@ -1,1 +1,1 @@
-include ':app', ':library:lib_common', ':library:lib_widget'
+include ':app', ':library:lib_common', ':library:lib_widget', ':daogenerate'

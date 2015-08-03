@@ -4,9 +4,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.MessageFormat;
 
-import android.R.integer;
-
-import com.m.rabbit.bean.User;
 import com.m.rabbit.config.MyConfig;
 import com.m.rabbit.utils.MD5Utils;
 import com.m.rabbit.utils.PropertiesUtils;

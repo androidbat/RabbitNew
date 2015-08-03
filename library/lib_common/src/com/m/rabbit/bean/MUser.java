@@ -2,7 +2,7 @@ package com.m.rabbit.bean;
 
 import java.io.Serializable;
 
-public class User implements Serializable{
+public class MUser implements Serializable{
 	/**
 	 * 
 	 */
@@ -34,12 +34,12 @@ public class User implements Serializable{
 	
 	
 	
-	public User(String userId, String userName) {
+	public MUser(String userId, String userName) {
 		this.userId = userId;
 		this.userName = userName;
 	}
 	
-	public User(){
+	public MUser(){
 		
 	}
 
