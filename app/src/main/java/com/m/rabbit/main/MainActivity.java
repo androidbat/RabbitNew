@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.c.commen.dialog.DialogHelper;
 import com.c.commen.view.PagerSlidingTabStrip;
 import com.m.rabbit.R;
 import com.m.rabbit.base.BaseActivity;
@@ -31,6 +32,13 @@ public class MainActivity extends BaseActivity {
         ButterKnife.inject(this);
         setSupportActionBar(toolbar);
         setupViewPager(viewpager);
+
+        new DialogHelper(this)
+                .setTitle("title")
+                .setMessage("afafaf")
+                .setPositiveButton("确定",null)
+                .setNegativeButton("去下",null)
+                .show();
     }
 
     private void setupViewPager(ViewPager viewpager) {

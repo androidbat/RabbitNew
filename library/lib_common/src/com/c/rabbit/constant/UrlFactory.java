@@ -10,4 +10,7 @@ public class UrlFactory {
         platform = AppConstants.getInstance().getmPlatform();
     }
 
+    public static String getUpload() {
+        return "";
+    }
 }

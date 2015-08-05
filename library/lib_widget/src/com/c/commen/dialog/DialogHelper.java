@@ -99,7 +99,11 @@ public class DialogHelper {
                 dialog_positive_tv.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mParams.positiveListener.onClick(mDialog,0);
+                        if (mParams.positiveListener != null) {
+                            mParams.positiveListener.onClick(mDialog,0);
+                        }else{
+
+                        }
                     }
                 });
             }
