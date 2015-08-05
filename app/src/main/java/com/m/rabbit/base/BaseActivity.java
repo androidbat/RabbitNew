@@ -1,13 +1,13 @@
 package com.m.rabbit.base;
 
-import android.support.v7.app.AppCompatActivity;
+import com.c.commen.base.CommenActivity;
 
 /**
  * Created by wg on 2015/8/5.
  */
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends CommenActivity {
 
 
-    
+
 
 }

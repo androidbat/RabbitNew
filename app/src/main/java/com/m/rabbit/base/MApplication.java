@@ -1,9 +1,8 @@
 package com.m.rabbit.base;
 
-import android.app.Application;
 import android.content.Context;
 
-import com.m.rabbit.bean.User;
+import com.c.commen.base.CommenApp;
 import com.m.rabbit.db.DbHelper;
 import com.squareup.leakcanary.LeakCanary;
 
@@ -11,7 +10,7 @@ import com.squareup.leakcanary.LeakCanary;
 /**
  * Created by wg on 2015/7/27.
  */
-public class MApplication extends Application {
+public class MApplication extends CommenApp {
 
     public static Context context;
 
@@ -21,7 +20,6 @@ public class MApplication extends Application {
         context = this;
         LeakCanary.install(this);
         DbHelper.init(this, "mm.db");
-        DbHelper.save(new User());
     }
 
 }

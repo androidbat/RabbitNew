@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.c.widget.PagerSlidingTabStrip;
+import com.c.commen.view.PagerSlidingTabStrip;
 import com.m.rabbit.R;
 
 import java.util.ArrayList;

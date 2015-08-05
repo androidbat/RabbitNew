@@ -5,4 +5,10 @@
     <item name="tag" type="id" />
     <item name="tag_expandable_text_view_reused" type="id" />
 
+    <item name="dialog_title_tv" type="id" />
+    <item name="dialog_title_layout" type="id" />
+    <item name="dialog_msg_tv" type="id" />
+    <item name="dialog_positive_tv" type="id" />
+    <item name="dialog_negative_tv" type="id" />
+
 </resources>

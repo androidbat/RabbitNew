@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.c.widget.PagerSlidingTabStrip;
+import com.c.commen.view.PagerSlidingTabStrip;
 import com.m.rabbit.R;
 import com.m.rabbit.base.BaseActivity;
 import com.m.rabbit.main.adapter.TabAdapter;

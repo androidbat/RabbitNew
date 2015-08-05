@@ -16,4 +16,5 @@
     <string name="no_data">暂无数据</string>
     <string name="more_loading">更多加载中...</string>
     <string name="release_to_load">释放加载更多</string>
+    <string name="loading">正在加载</string>
 </resources>

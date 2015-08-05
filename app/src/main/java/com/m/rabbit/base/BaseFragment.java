@@ -1,11 +1,10 @@
 package com.m.rabbit.base;
 
-import android.support.v4.app.Fragment;
+import com.c.commen.base.CommenFragment;
 
 /**
  * Created by wg on 2015/8/5.
  */
-public class BaseFragment extends Fragment {
-
+public class BaseFragment extends CommenFragment {
 
 }

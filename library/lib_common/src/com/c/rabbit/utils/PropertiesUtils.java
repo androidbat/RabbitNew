@@ -7,7 +7,7 @@ import java.util.Properties;
 
 
 public class PropertiesUtils {
-	public static final String PROPERTIES_COMMON_PATH = "/assets/server_info.properties";
+	public static final String PROPERTIES_COMMON_PATH = "/assets/common_info.properties";
 	private static HashMap<String, Properties> propertiesMap = new HashMap<String, Properties>();
 	public static String SERVER_PATH = "sver";
 	private static Properties domainProperties;
