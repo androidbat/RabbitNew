@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

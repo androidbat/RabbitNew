@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Scroller;
 import android.widget.TextView;
+
+import com.yitu.widget.R;
 
 public class PullView extends FrameLayout implements OnGestureListener, AnimationListener {
     private GestureDetector gestureDetector;

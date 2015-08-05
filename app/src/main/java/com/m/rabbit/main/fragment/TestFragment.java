@@ -1,4 +1,4 @@
-package com.m.rabbit.main.adapter;
+package com.m.rabbit.main.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

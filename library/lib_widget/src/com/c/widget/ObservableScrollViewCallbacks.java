@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yitu.widget;
+package com.c.widget;
 
 public interface ObservableScrollViewCallbacks {
     public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging,ScrollState mScrollState);

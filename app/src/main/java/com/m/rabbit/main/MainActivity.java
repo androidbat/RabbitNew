@@ -1,48 +1,45 @@
 package com.m.rabbit.main;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.c.widget.PagerSlidingTabStrip;
 import com.m.rabbit.R;
+import com.m.rabbit.base.BaseActivity;
 import com.m.rabbit.main.adapter.TabAdapter;
-import com.m.rabbit.main.adapter.TestFragment;
+import com.m.rabbit.main.fragment.TestFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 
-public class MainActivity extends AppCompatActivity {
-    @InjectView(R.id.toolbar)
-    Toolbar toolbar;
+public class MainActivity extends BaseActivity {
+    @InjectView(R.id.pager_tabs)
+    PagerSlidingTabStrip pager_tabs;
     @InjectView(R.id.viewpager)
     ViewPager viewpager;
-    @InjectView(R.id.tabs)
-    TabLayout tabs;
+    @InjectView(R.id.toolbar)
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         setupViewPager(viewpager);
-        tabs.setupWithViewPager(viewpager);
     }
 
     private void setupViewPager(ViewPager viewpager) {
-        TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
-        adapter.addFragment(new TestFragment("消息"), "消息");
-        adapter.addFragment(new TestFragment("联系人"), "联系人");
-        adapter.addFragment(new TestFragment("我"), "我");
+        TabAdapter adapter = new TabAdapter(getSupportFragmentManager(),this);
+        adapter.addFragment(new TestFragment("消息"), "消息",R.drawable.ic_menu,R.drawable.ic_menu);
+        adapter.addFragment(new TestFragment("联系人"), "联系人",R.drawable.ic_menu,R.drawable.ic_menu);
+        adapter.addFragment(new TestFragment("我"), "我",R.drawable.ic_menu,R.drawable.ic_menu);
         viewpager.setAdapter(adapter);
+        pager_tabs.setViewPager(viewpager);
     }
 
     @Override

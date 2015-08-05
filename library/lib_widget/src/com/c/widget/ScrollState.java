@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yitu.widget;
+package com.c.widget;
 
 public enum ScrollState {
     STOP,

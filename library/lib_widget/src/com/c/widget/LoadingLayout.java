@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 
 import android.content.Context;
@@ -16,6 +16,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.yitu.widget.R;
 
 public class LoadingLayout {
 	private Context mContext;

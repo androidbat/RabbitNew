@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,6 +9,9 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.KeyEvent;
 import android.view.View;
+
+import com.yitu.widget.R;
+
 /**
  * android动 ? 绕可移动轴心旋转图 ?
  * @author hanmr//
@@ -25,7 +28,7 @@ public class BeadplateMiddle extends View{
     public BeadplateMiddle(Context context) {  //
         super(context);  
         //装载资源  
-        mBitmap =((BitmapDrawable) getResources().getDrawable(R.drawable.pan_anecdotes)).getBitmap();      
+        mBitmap =((BitmapDrawable) getResources().getDrawable(R.drawable.pan_anecdotes)).getBitmap();
         // ?启线 ?
         new Thread(new DrawThread()).start();  
     }  

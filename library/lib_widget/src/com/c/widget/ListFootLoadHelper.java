@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.yitu.widget.R;
 
 public class ListFootLoadHelper implements OnScrollListener, OnClickListener{
 

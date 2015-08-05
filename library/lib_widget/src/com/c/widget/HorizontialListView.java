@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -17,7 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.Scroller;
 
-import com.yitu.widget.EasygoAnimation.KXAnimationListener;
+import com.c.widget.EasygoAnimation.KXAnimationListener;
 
 public class HorizontialListView extends AdapterView<ListAdapter> implements KXAnimationListener {
     private static final String TAG = "Test";

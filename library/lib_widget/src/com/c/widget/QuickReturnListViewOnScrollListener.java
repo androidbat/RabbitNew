@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import java.util.Dictionary;
 import java.util.Hashtable;

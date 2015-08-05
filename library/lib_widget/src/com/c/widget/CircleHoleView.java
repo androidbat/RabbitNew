@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,6 +10,8 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.yitu.widget.R;
 
 import java.util.ArrayList;
 

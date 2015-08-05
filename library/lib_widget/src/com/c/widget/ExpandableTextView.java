@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.TextView;
+
+import com.yitu.widget.R;
 
 /**
  *

@@ -1,4 +1,4 @@
-package com.yitu.widget;
+package com.c.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,6 +10,8 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+
+import com.yitu.widget.R;
 
 public class RoundProgressBar  extends View {
     /** 
@@ -79,7 +81,7 @@ public class RoundProgressBar  extends View {
   
           
         TypedArray mTypedArray = context.obtainStyledAttributes(attrs,  
-                R.styleable.RoundProgressBar);  
+                R.styleable.RoundProgressBar);
           
         //获取自定义属性和默认值  
         roundColor = mTypedArray.getColor(R.styleable.RoundProgressBar_roundColor, Color.RED);  
