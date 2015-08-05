@@ -181,7 +181,7 @@ public class DialogHelper {
         public String title;
         public String msg;
         public String positive;
-        public String negative;
+        public String negative = "取消";
         public boolean isCanceledOnTouchOutside;
         public boolean isCancelable;
         public DialogInterface.OnClickListener positiveListener;
