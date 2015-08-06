@@ -7,7 +7,4 @@ import com.c.commen.base.CommenActivity;
  */
 public class BaseActivity extends CommenActivity {
 
-
-
-
 }

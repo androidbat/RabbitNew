@@ -1,7 +1,6 @@
 package com.m.rabbit.main.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -25,11 +24,11 @@ public class TabAdapter extends FragmentPagerAdapter implements PagerSlidingTabS
     private final ArrayList<Integer> mResIds = new ArrayList<Integer>();
     private final ArrayList<Integer> mSelectedIds = new ArrayList<Integer>();
     private final ArrayList<View> mTabs = new ArrayList<View>();
-    private Context context;
+    private Context mContext;
 
     public TabAdapter(FragmentManager fm,Context context) {
         super(fm);
-        this.context = context.getApplicationContext();
+        this.mContext = context.getApplicationContext();
     }
 
     public void addFragment(Fragment fragment, String title,int resId,int selectId) {
@@ -39,7 +38,7 @@ public class TabAdapter extends FragmentPagerAdapter implements PagerSlidingTabS
         mSelectedIds.add(selectId);
     }
     public void addFragment(Fragment fragment, int titleId,int resId,int selectId) {
-        addFragment(fragment,context.getString(titleId),resId, selectId);
+        addFragment(fragment, mContext.getString(titleId),resId, selectId);
     }
 
     @Override
@@ -49,7 +48,7 @@ public class TabAdapter extends FragmentPagerAdapter implements PagerSlidingTabS
 
     @Override
     public View getPageView(int position) {
-        View view = LayoutInflater.from(context).inflate(R.layout.main_tabs_item, null);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.main_tabs_item, null);
         TextView tv = (TextView) view.findViewById(R.id.tab_text);
         ImageView iv = (ImageView) view.findViewById(R.id.tab_img);
         tv.setText(mTitles.get(position));
@@ -68,10 +67,10 @@ public class TabAdapter extends FragmentPagerAdapter implements PagerSlidingTabS
         TextView tv = (TextView) view.findViewById(R.id.tab_text);
         ImageView iv = (ImageView) view.findViewById(R.id.tab_img);
         if (selected){
-            tv.setTextColor(Color.parseColor("#333333"));
+            tv.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
             iv.setImageResource(mSelectedIds.get(postion));
         }else{
-            tv.setTextColor(Color.parseColor("#999999"));
+            tv.setTextColor(mContext.getResources().getColor(R.color.gray93));
             iv.setImageResource(mResIds.get(postion));
         }
         return 0;

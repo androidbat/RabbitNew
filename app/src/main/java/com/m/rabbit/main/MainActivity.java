@@ -36,10 +36,9 @@ public class MainActivity extends BaseActivity {
 
     private void setupViewPager(ViewPager viewpager) {
         TabAdapter adapter = new TabAdapter(getSupportFragmentManager(),this);
-        adapter.addFragment(new TestFragment("首页"), "首页",R.drawable.ic_menu,R.drawable.ic_menu);
-        adapter.addFragment(new TestFragment("资讯"), "资讯",R.drawable.ic_menu,R.drawable.ic_menu);
-        adapter.addFragment(new TestFragment("发现"), "发现",R.drawable.ic_menu,R.drawable.ic_menu);
-        adapter.addFragment(new TestFragment("我"), "我",R.drawable.ic_menu,R.drawable.ic_menu);
+        adapter.addFragment(new TestFragment("首页"), "首页",R.drawable.main_ic_find,R.drawable.main_ic_home_selected);
+        adapter.addFragment(new TestFragment("发现"), "发现",R.drawable.main_ic_find,R.drawable.main_ic_find_seleted);
+        adapter.addFragment(new TestFragment("我"), "我",R.drawable.main_ic_my,R.drawable.main_ic_my_selected);
         viewpager.setAdapter(adapter);
         pager_tabs.setViewPager(viewpager);
     }
