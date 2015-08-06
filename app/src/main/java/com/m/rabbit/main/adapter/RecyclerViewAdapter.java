@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.m.rabbit.R;
+import com.m.rabbit.constant.TestData;
 import com.m.rabbit.main.DetailActivity;
 
 import butterknife.ButterKnife;
@@ -36,8 +37,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         final View view = holder.mView;
+        holder.faceIv.setImageResource(TestData.imgIds[position%TestData.imgIds.length]);
+        holder.titleTv.setText(TestData.titles[position%TestData.titles.length]);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,10 +48,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 animator.addListener(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {
+                        DetailActivity.position = position;
                         DetailActivity.start(mContext);
 
 //                        Intent i = new Intent(mContext, DetailActivity.class);
-//                        ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity)mContext, Pair.create((View)holder.faceTv, "face"));
+//                        ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity)mContext, Pair.create((View)holder.faceIv, "face"));
 //                        mContext.startActivity(i, transitionActivityOptions.toBundle());
                     }
                 });
@@ -59,14 +63,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 20;
     }
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         View mView;
-        @InjectView(R.id.face_tv)
-        ImageView faceTv;
+        @InjectView(R.id.face_iv)
+        ImageView faceIv;
         @InjectView(R.id.title_tv)
         TextView titleTv;
 
