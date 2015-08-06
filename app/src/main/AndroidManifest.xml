@@ -24,7 +24,8 @@
             android:name=".main.MainActivity"/>
         <activity
             android:name=".main.DetailActivity"
-            android:theme="@style/AppThemeTranslucent"/>
+            android:theme="@style/AppThemeTranslucent"
+            />
 
     </application>
 
