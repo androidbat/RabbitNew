@@ -5,6 +5,6 @@ import com.c.commen.base.CommenFragment;
 /**
  * Created by wg on 2015/8/5.
  */
-public class BaseFragment extends CommenFragment {
+public abstract class BaseFragment extends CommenFragment {
 
 }

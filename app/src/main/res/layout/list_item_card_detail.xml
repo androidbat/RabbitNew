@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/row_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="想一次过体验沙漠和大海两种自然景观的瘾？那么，位于河北省秦皇岛市昌黎县的翡翠岛可以满足你的这个愿望。这是一座有黄色细沙和绿色植被相间构成的半岛。最奇特的是岛上连绵起伏的沙山，方圆月7平方公里，造型优美，最高处达44米，坐在上面观海的景象堪称梦幻。东京迪士尼乐园被誉为亚洲第一游乐园，也是目前世界上最大的迪士尼乐园。迪士尼一直都是童话世界的代名词，如果你喜欢游乐园，那你一定要来迪士尼。在迪士尼正门的中心，你可以看到高耸的“灰姑娘城”这座主建筑，它的周围还建造了多种主题的游乐场和游乐馆，有冒险宫、世界著名故事、传说宫、有风景宫、闲游宫、宇宙宫、幻想宫等。每一个游乐宫都配有详细的情节解说和音乐，让你仿佛身临其境。"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

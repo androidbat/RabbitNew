@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import com.c.commen.view.PagerSlidingTabStrip;
 import com.m.rabbit.R;
 import com.m.rabbit.base.BaseActivity;
+import com.m.rabbit.main.fragment.ListFragment;
 import com.m.rabbit.main.adapter.TabAdapter;
 import com.m.rabbit.main.fragment.TestFragment;
 
@@ -31,16 +32,17 @@ public class MainActivity extends BaseActivity {
         ButterKnife.inject(this);
         setSupportActionBar(toolbar);
         setupViewPager(viewpager);
-
     }
 
     private void setupViewPager(ViewPager viewpager) {
         TabAdapter adapter = new TabAdapter(getSupportFragmentManager(),this);
-        adapter.addFragment(new TestFragment("首页"), "首页",R.drawable.main_ic_find,R.drawable.main_ic_home_selected);
+        adapter.addFragment(new ListFragment(), "首页",R.drawable.main_ic_find,R.drawable.main_ic_home_selected);
+        adapter.addFragment(new TestFragment("资讯"), "资讯",R.drawable.main_ic_info,R.drawable.main_ic_info_selected);
         adapter.addFragment(new TestFragment("发现"), "发现",R.drawable.main_ic_find,R.drawable.main_ic_find_seleted);
         adapter.addFragment(new TestFragment("我"), "我",R.drawable.main_ic_my,R.drawable.main_ic_my_selected);
         viewpager.setAdapter(adapter);
         pager_tabs.setViewPager(viewpager);
+        pager_tabs.setSmooth(false);
     }
 
     @Override

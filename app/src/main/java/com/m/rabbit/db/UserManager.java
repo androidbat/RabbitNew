@@ -10,7 +10,7 @@ import de.greenrobot.dao.query.Query;
 /**
  * Created by wg on 2015/8/5.
  */
-public class UserDaoManager {
+public class UserManager {
 
     private static UserDao getUserDao(){
         return DbHelper.daoSession.getUserDao();

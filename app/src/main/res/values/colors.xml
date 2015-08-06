@@ -4,6 +4,11 @@
     <color name="colorPrimary">#fe6466</color>
     <color name="colorPrimaryDark">#fe6466</color>
     <color name="divider_color">#dddbdb</color>
+    <color name="window_background">#FFF5F5F5</color>
+
+    <color name="refresh_progress_1">#fe6466</color>
+    <color name="refresh_progress_2">#FFD6585A</color>
+    <color name="refresh_progress_3">#f52f2f</color>
 
     <color name="gray80">#808080</color>
     <color name="gray93">#939090</color>
